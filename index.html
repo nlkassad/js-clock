@@ -105,6 +105,8 @@
     const yearBox = document.getElementById('year');
 
     function setDate() {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       const now = new Date();
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
@@ -119,7 +121,7 @@
       const month = now.getMonth();
       const year = now.getFullYear();
       dateBox.innerHTML = `${day}`;
-      monthBox.innerHTML = `${month}`;
+      monthBox.innerHTML = `${months[month]}`;
       yearBox.innerHTML = `${year}`;
       // console.log(now);
       console.log(day);
